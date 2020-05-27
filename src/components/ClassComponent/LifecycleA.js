@@ -6,50 +6,50 @@ class LifecycleA extends Component {
         super(props)
     
         this.state = {
-            name: 'Mauf Ahmed'
+            name: 'Bangladesh'
         }
-        console.log('LifecycleA Constructor')
+        console.log('LifecycleA constructor');
     }
 
     static getDerivedStateFromProps(props, state){
-        console.log('LifecycleA getDerivedStateFromProps')
-        return null
+        console.log('LifecyleA getDerivedStateFromProps');
+        return null;
     }
-    
+
     componentDidMount(){
-        console.log('LifecyleA componentDidMount');
+        console.log('LifecycleA componentDidMount');
     }
 
     shouldComponentUpdate(){
-        console.log('LifecycleA shouldComponentUpdate');
+        console.log('LifecyleA shouldcomponetUpdate');
         return true;
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState){
-        console.log('LifecycleA getSnapshotBeforeUpdate');
+        console.log('LifecyleA getSnapshotBeforeUpdate');
         return null;
     }
 
-    componentDidUpdate() {
-        console.log('LifecycleA componentDidUpdate')
+    componentDidUpdate(){
+        console.log('LifecyleA componentDidUpdte');
     }
-
-    changeState = () => {
+    
+    handleChanged = () => {
         this.setState({
-            name: 'Wellcome Maruf'
+            name: 'Welcome Bangladesh'
         })
     }
     render() {
-        console.log('LifecycleA Render');   
+        console.log('LifecyleA render');
         return (
             <div>
-                <div>{this.state.name}</div>
-                <button onClick={this.changeState}>Change state</button>
+                <h1>{this.state.name}</h1>
+                <button onClick={this.handleChanged}>State Changed</button>
                 <LifecycleB />
             </div>
-            
         )
     }
 }
 
 export default LifecycleA
+

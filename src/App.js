@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import LifecycleA from './components/ClassComponent/LifecycleA';
+import Table from './components/FunctionalComponent/Table';
 
 function App() {
   return (
     <div className="App">
-      <LifecycleA />
+      <Table />
     </div>
   );
 }
